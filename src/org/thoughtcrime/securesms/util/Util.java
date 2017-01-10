@@ -339,11 +339,6 @@ public class Util {
     }
   }
 
-  public static int getDaysTillBuildExpiry() {
-    int age = (int)TimeUnit.MILLISECONDS.toDays(System.currentTimeMillis() - BuildConfig.BUILD_TIMESTAMP);
-    return 90 - age;
-  }
-
   @TargetApi(VERSION_CODES.LOLLIPOP)
   public static boolean isMmsCapable(Context context) {
     return (VERSION.SDK_INT >= VERSION_CODES.LOLLIPOP) || OutgoingLegacyMmsConnection.isConnectionPossible(context);
